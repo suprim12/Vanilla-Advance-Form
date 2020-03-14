@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla Advance Form (Javascript UI)</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <main class="site-main">
+      <div class="form-container">
+        <form class="ad-form" id="adForm">
+          <h1 class="ad-form-title">
+            <i class="ri-lightbulb-flash-line"></i> Vanilla Advance Form
+          </h1>
+
+          <!-- Personal Information -->
+          <div class="form-section">
+            <h4 class="form-section-label ">
+              <i class="ri-user-line"></i> Personal Information :
+            </h4>
+            <div class="form-row">
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  name="name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Enter your phone number"
+                  name="name"
+                />
+              </div>
+            </div>
+
+            <h4 class="form-section-label ">I am :</h4>
+            <div class="form-group">
+              <div class="tabs-radio-circle">
+                <div class="tabs-radio-circle-item">
+                  <input type="radio" name="status" id="student" />
+                  <label for="student">Student</label>
+                </div>
+                <div class="tabs-radio-circle-item">
+                  <input type="radio" name="status" id="developer" />
+                  <label for="developer">Developer</label>
+                </div>
+                <div class="tabs-radio-circle-item">
+                  <input
+                    type="radio"
+                    name="status"
+                    value="ironman"
+                    id="ironman"
+                  />
+                  <label for="ironman"> Iron Man</label>
+                </div>
+                <div class="tabs-radio-circle-item">
+                  <input
+                    type="radio"
+                    name="status"
+                    value="batman"
+                    id="batman"
+                  />
+                  <label for="batman">Batman</label>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="form-section-label ">Gender :</h4>
+            <div class="tabs-radio-box">
+              <div class="tabs-radio-box-item">
+                <input type="radio" name="gender" value="male" id="male" />
+                <label for="male">male</label>
+              </div>
+              <div class="tabs-radio-box-item">
+                <input type="radio" name="gender" value="female" id="female" />
+                <label for="female">female</label>
+              </div>
+              <div class="tabs-radio-box-item">
+                <input type="radio" name="gender" value="alien" id="alien" />
+                <label for="alien">Alien</label>
+              </div>
+              <div class="tabs-radio-box-item">
+                <input type="radio" name="gender" value="other" id="other" />
+                <label for="other">other</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="form-section">
+            <h4 class="form-section-label has-sub">
+              <i class="ri-user-location-line"></i> Address :
+            </h4>
+            <p class="form-section-sub-label">Temporary Address :</p>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Country" name="country" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Province / State"
+                  name="state"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="City / District"
+                  name="district"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Area" name="area" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Street Name "
+                  name="street-name"
+                />
+              </div>
+            </div>
+            <p class="form-section-sub-label">Permanent Address :</p>
+            <div class="form-group custom-checkbox">
+              <input type="checkbox" id="samecheckaddress" />
+              <label for="samecheckaddress">Same as Temporary</label>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Country" name="p-country" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Province / State"
+                  name="p-state"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="City / District"
+                  name="p-district"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="Area" name="p-area" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Street Name "
+                  name="p-street-name"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="form-section">
+            <h4 class="form-section-label">
+              <i class="ri-award-fill"></i> Education
+            </h4>
+            <div class="form-group form-group-btn addEducationTrigger">
+              &plus; Add Education
+            </div>
+            <div class="addEducationForm">
+              <span class="addEducationFormClose">&times; Close</span>
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Institution Name"
+                    name="institution_name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Level" name="level" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Major Title"
+                    name="major_title"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  placeholder="Passed Year"
+                  name="passed_year"
+                />
+              </div>
+              <button type="button" class="outline-btn" id="addEducationbtn">
+                Add
+              </button>
+            </div>
+
+            <div class="addEducationFormOutput">
+              <div class="addEducationFormOutputItem">
+                <div class="addEducationFormOutputItem__content">
+                  <h4>Level, major_title</h4>
+                  <div class="meta">
+                    <span>institution_name</span>
+                    <span>passed_year</span>
+                  </div>
+                </div>
+                <div class="addEducationFormOutputItem__buttons">
+                  <button
+                    type="button"
+                    id="editEductionbtn"
+                    class="outline-btn"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    type="button"
+                    id="removeEductionbtn"
+                    class="outline-btn danger"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Work -->
+          <div class="form-section">
+            <h4 class="form-section-label">
+              <i class="ri-building-line"></i> Work
+            </h4>
+            <div class="work-form-wrapper">
+              <div class="form-row">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][company_name]"
+                    id="comany_name"
+                    placeholder="Company Name"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][job_title]"
+                    id="job_title"
+                    placeholder="Job Title"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][state]"
+                    id="state"
+                    placeholder="State"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <!-- Form Group -->
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][city]"
+                    class="Institution-name"
+                    placeholder="City/District"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][experience]"
+                    class="Institution-name"
+                    placeholder="Experience"
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="work[0][website]"
+                    class="Institution-name"
+                    placeholder="Website"
+                  />
+                </div>
+              </div>
+            </div>
+            <button type="button" class="outline-btn">Add Work</button>
+          </div>
+
+          <!-- Photos -->
+          <div class="form-section">
+            <h4 class="form-section-label">
+              <i class="ri-image-line"></i> Photos :
+            </h4>
+            <div class="upload-droparea">
+              <input type="file" id="uploadphotos" />
+              <label for="uploadphotos">Drag & Drop</label>
+            </div>
+            <div class="upload-preview">
+              <div class="upload-preview-item" data-imagname="ats">
+                <img src="https://picsum.photos/100/100" alt="preview" />
+                <div class="upload-preview-item-actions">
+                  <span class="closepreview">&times;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="form-section">
+            <h4 class="form-section-label">
+              <i class="ri-landscape-fill"></i> Skills
+            </h4>
+            <div class="skills-container">
+              <div class="tags">
+                <div class="tag">
+                  JS
+                  <span class="closetag">&times;</span>
+                </div>
+                <div class="tag">
+                  JS
+                  <span class="closetag">&times;</span>
+                </div>
+                <div class="tag">
+                  JS
+                  <span class="closetag">&times;</span>
+                </div>
+                <div class="tag">
+                  JS
+                  <span class="closetag">&times;</span>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="skills"
+                name="skills"
+                placeholder="ADD SKILLS (HIT ENTER)"
+              />
+            </div>
+            <p class="form-section-sub-label">
+              Select Skills
+            </p>
+            <div class="skills-choices">
+              <div class="choice">Javascript</div>
+              <div class="choice">HTML</div>
+              <div class="choice">CSS</div>
+              <div class="choice">SCSS</div>
+              <div class="choice">PHP</div>
+              <div class="choice">NODE JS</div>
+              <div class="choice">MERN</div>
+              <div class="choice">REACT</div>
+            </div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-btn">
+            <i class="ri-send-plane-fill"></i> Submit
+          </button>
+        </form>
+        <div class="form-output">
+          <pre class="form-output-content"></pre>
+        </div>
+      </div>
+    </main>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
